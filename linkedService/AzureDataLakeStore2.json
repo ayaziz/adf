@@ -1,0 +1,13 @@
+{
+	"name": "AzureDataLakeStore2",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://adlscosomscert.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "142ae394-1ac7-41cc-a0bc-d39a169cfdfe",
+			"subscriptionId": "aa9e516e-a159-4393-809b-84593a5d393a",
+			"resourceGroupName": "Learning"
+		}
+	}
+}
