@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfcosomscert"
+		},
+		"CosmosDb1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://adlscosomscert.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_tenant": {
+			"value": "142ae394-1ac7-41cc-a0bc-d39a169cfdfe"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_subscriptionId": {
+			"value": "aa9e516e-a159-4393-809b-84593a5d393a"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
+			"value": "Learning"
+		},
+		"AzureDataLakeStore2_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://adlscosomscert.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureDataLakeStore2_properties_typeProperties_tenant": {
+			"value": "142ae394-1ac7-41cc-a0bc-d39a169cfdfe"
+		},
+		"AzureDataLakeStore2_properties_typeProperties_subscriptionId": {
+			"value": "aa9e516e-a159-4393-809b-84593a5d393a"
+		},
+		"AzureDataLakeStore2_properties_typeProperties_resourceGroupName": {
+			"value": "Learning"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
