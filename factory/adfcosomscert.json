@@ -1,0 +1,9 @@
+{
+	"name": "adfcosomscert",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "171608ce-10c3-4e53-8847-1d9127f9526d",
+		"tenantId": "142ae394-1ac7-41cc-a0bc-d39a169cfdfe"
+	}
+}
