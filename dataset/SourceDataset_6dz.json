@@ -1,0 +1,25 @@
+{
+	"name": "SourceDataset_6dz",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CosmosDb1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "CosmosDbSqlApiCollection",
+		"schema": {
+			"type": "object",
+			"properties": {
+				"FamilyName": {
+					"type": "string"
+				},
+				"partitionKey": {
+					"type": "string"
+				}
+			}
+		},
+		"typeProperties": {
+			"collectionName": "families"
+		}
+	}
+}

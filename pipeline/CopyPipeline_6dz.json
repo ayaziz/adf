@@ -1,0 +1,136 @@
+{
+	"name": "CopyPipeline_6dz",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_6dz",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "families"
+					},
+					{
+						"name": "Destination",
+						"value": "/"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "CosmosDbSqlApiSource",
+						"preferredRegions": [],
+						"pageSize": 1000,
+						"detectDatetime": true
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureDataLakeStoreWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['FamilyName']"
+								},
+								"sink": {
+									"type": "String",
+									"ordinal": 1
+								}
+							},
+							{
+								"source": {
+									"path": "$['id']"
+								},
+								"sink": {
+									"type": "String",
+									"ordinal": 2
+								}
+							},
+							{
+								"source": {
+									"path": "$['partitionKey']"
+								},
+								"sink": {
+									"type": "String",
+									"ordinal": 3
+								}
+							},
+							{
+								"source": {
+									"path": "$['_rid']"
+								},
+								"sink": {
+									"ordinal": 4
+								}
+							},
+							{
+								"source": {
+									"path": "$['_self']"
+								},
+								"sink": {
+									"ordinal": 5
+								}
+							},
+							{
+								"source": {
+									"path": "$['_etag']"
+								},
+								"sink": {
+									"ordinal": 6
+								}
+							},
+							{
+								"source": {
+									"path": "$['_attachments']"
+								},
+								"sink": {
+									"ordinal": 7
+								}
+							},
+							{
+								"source": {
+									"path": "$['_ts']"
+								},
+								"sink": {
+									"ordinal": 8
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_6dz",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_6dz",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
